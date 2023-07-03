@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <link rel="stylesheet" href="/dist/output.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text To Speech Converter</title>
+  </head>
+  <body
+    class="bg-gradient-to-tr from-slate-500 to-red-500 flex justify-center items-center w-full h-full p-3"
+  >
+    <div
+      class="rounded-2xl mx-auto bg-white/30 backdrop-blur-sm py-4 px-2 shadow-xl"
+    >
+      <h1 class="text-2xl text-center mb-6 font-bold text-slate-700">
+        Convert text to speech
+      </h1>
+      <input
+        id="file-to-convert"
+        class="backdrop-blur-sm bg-white/10 text-slate-800 file:py-2 file:bg-white/40 file:placeholder: file:text-slate-800 file:border-0 w-full mb-2 rounded-md"
+        type="file"
+        accept=".txt"
+      />
+      <p class="text-[12px] m-0 font-bold text-slate-700">
+        *only .txt files supported!
+      </p>
+      <p class="text-center font-bold text-slate-700 mb-2">OR</p>
+      <textarea
+        minlength="2"
+        placeholder="enter text to convert..."
+        class="w-full h-[250px] rounded-lg resize-none p-2 outline-none focus:border-[1px] border-green-500 backdrop-blur-sm bg-white/10 text-slate-800 placeholder:text-slate-800"
+        name=""
+        id="text-to-convert"
+      ></textarea>
+      <label class="block mt-5 text-slate-700 text-[16px]"
+        >Select Voice:
+      </label>
+      <select
+        id="voice-select"
+        class="w-full h-9 rounded-md backdrop-blur-sm bg-white/10 outline-none text-slate-800"
+      ></select>
+      <div class="flex justify-center gap-1">
+        <button
+          class="backdrop-blur-sm bg-white/30 text-slate-600 font-bold shadow-lg px-3 py-1 mt-5 rounded-full text-lg"
+          id="btn-convert"
+          type="submit"
+        >
+          Convert
+        </button>
+        <!-- <button
+          class="backdrop-blur-sm bg-red-500 text-slate-200 opacity-80 font-bold shadow-md px-3 py-1 mt-5 rounded-full text-lg"
+          id="btn-convert"
+          type="reset"
+        >
+          Reset
+        </button> -->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
