@@ -4,9 +4,13 @@ This script converts plain text inputed in the textbox or from uploaded `.txt` f
 
 Everything happens within your browser, nothing is transferred remotely!
 
+---
+
 ### Dependencies
 
 - TailwindCSS
+
+---
 
 ### Note:
 
