@@ -3,6 +3,8 @@ let voices = [];
 let voiceSelection = document.querySelector("#voice-select");
 let textToConvert = document.querySelector("#text-to-convert");
 
+window.speechSynthesis.getVoices();
+
 window.speechSynthesis.onvoiceschanged = () => {
   voices = window.speechSynthesis.getVoices();
   speech.voice = voices[0];
