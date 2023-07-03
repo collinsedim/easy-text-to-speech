@@ -13,7 +13,15 @@ window.speechSynthesis.onvoiceschanged = () => {
 };
 
 voiceSelection.addEventListener("change", () => {
-  speech.voice = voices[voiceSelection.selectedIndex];
+  // Get selected voice
+  let selectedVoice = voices[voiceSelection.selectedIndex];
+
+  // Workaround for Chrome bug
+  speech.voiceURI = selectedVoice.voiceURI;
+  speech.lang = selectedVoice.lang;
+
+  // Assign the selectedoice
+  speech.voice = selectedVoice;
 });
 
 if ("speechSynthesis" in window) {
