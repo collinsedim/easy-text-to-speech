@@ -38,7 +38,7 @@ let fileToConvert = document.querySelector("#file-to-convert");
 fileToConvert.addEventListener("change", function () {
   let reader = new FileReader();
   reader.onload = () => {
-    console.log(reader.result);
+    // console.log(reader.result);
 
     // speak content of text
     if ("speechSynthesis" in window) {
